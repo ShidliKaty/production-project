@@ -7,6 +7,7 @@ import { MainPage } from 'pages/MainPage';
 
 
 import './styles/index.scss'
+import { Navbar } from 'widgets/Navbar';
 
 
 const App = () => {
@@ -15,9 +16,8 @@ const App = () => {
 
     return (
         <div className={classNames('app', {}, [theme])}>
+            <Navbar/>
             <button onClick={toggleTheme}>Toggle theme</button>
-            <Link to={'/'}>Main</Link>
-            <Link to={'/about'}>About</Link>
             <AppRouter/>
         </div>
     );
