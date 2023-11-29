@@ -23,5 +23,9 @@
         {
             "name": "typescript-plugin-css-modules"
         }
-    ]
+    ],
+    "include": [
+        "./config/jest/jest-setup.ts",
+        "./src/**/*"
+      ],
 }
