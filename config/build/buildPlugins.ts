@@ -1,8 +1,8 @@
 import HTMLWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
-import { buildOptions } from './types/config';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import {BundleAnalyzerPlugin} from 'webpack-bundle-analyzer';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import { buildOptions } from './types/config';
 
 export function buildPlugins({
     paths,
@@ -19,8 +19,8 @@ export function buildPlugins({
             __IS_DEV__: JSON.stringify(isDev),
         }),
         new BundleAnalyzerPlugin({
-            openAnalyzer: false
-        })
-        
+            openAnalyzer: false,
+        }),
+
     ];
 }
