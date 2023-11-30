@@ -1,7 +1,12 @@
+import { classNames } from 'shared/lib/classNames';
 import './Loader.scss';
 
-const Loader = () => (
-    <div className="lds-ellipsis">
+interface LoaderProps {
+    className?: string;
+}
+
+const Loader = ({ className }: LoaderProps) => (
+    <div className={classNames('lds-ellipsis', {}, [className])}>
         <div />
         <div />
         <div />
