@@ -10,5 +10,7 @@
     "О сайте": "About us",
     "Войти": "LogIn",
     "decrement": "decrement",
-    "increment": "increment"
+    "increment": "increment",
+    "Введите username": "Enter username",
+    "Введите пароль": "Enter password"
 }
