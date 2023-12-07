@@ -1,5 +1,5 @@
 import path from 'path';
-import webpack, { RuleSetRule } from 'webpack';
+import webpack, { DefinePlugin, RuleSetRule } from 'webpack';
 import { buildCssLoader } from '../build/loaders/buildCssLoader';
 import { BuildPaths } from '../build/types/config';
 
@@ -11,12 +11,14 @@ export default ({ config }: {config: webpack.Configuration}) => {
         src: path.resolve(__dirname, '..', '..', 'src'),
     };
 
+    config.resolve?.modules?.unshift(paths.src);
+
     config.resolve?.modules?.push(paths.src);
     config.resolve?.extensions?.push('.ts', '.tsx');
     config.module?.rules?.push(buildCssLoader(true));
     // eslint-disable-next-line no-param-reassign
 
-    if (config?.module?.rules !== undefined) {
+    if (config.module?.rules !== undefined) {
         // @ts-ignore
         // eslint-disable-next-line no-param-reassign
         config.module.rules = config.module.rules.map((rule: RuleSetRule) => {
@@ -32,6 +34,10 @@ export default ({ config }: {config: webpack.Configuration}) => {
             use: ['@svgr/webpack'],
         });
     }
+
+    config.plugins?.push(new DefinePlugin({
+        __IS_DEV__: true,
+    }));
 
     return config;
 };

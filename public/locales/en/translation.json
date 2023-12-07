@@ -8,9 +8,12 @@
     "throw error": "throw error",
     "Главная": "Main",
     "О сайте": "About us",
-    "Войти": "LogIn",
+    "Войти": "Log in",
+    "Выйти": "Log out",
     "decrement": "decrement",
     "increment": "increment",
     "Введите username": "Enter username",
-    "Введите пароль": "Enter password"
+    "Введите пароль": "Enter password",
+    "Форма авторизации": "Authorisation form",
+    "Неверный логин или пароль": "Incorrect username or password"
 }
