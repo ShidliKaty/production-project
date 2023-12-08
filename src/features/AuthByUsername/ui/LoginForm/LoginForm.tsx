@@ -2,25 +2,40 @@ import { classNames } from 'shared/lib/classNames';
 import { useTranslation } from 'react-i18next';
 import Button, { ButtonTheme } from 'shared/ui/Button/Button';
 import Input from 'shared/ui/Input/Input';
-import { useDispatch, useSelector } from 'react-redux';
-import { memo, useCallback } from 'react';
+import { ReduxStoreWithManager } from 'app/providers/StoreProvider';
+import { useDispatch, useSelector, useStore } from 'react-redux';
+import { memo, useCallback, useEffect } from 'react';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { getLoginUsername } from '../../modal/selectors/getLoginUsername/getLoginUsername';
+import { getLoginPassword } from '../../modal/selectors/getLoginPassword/getLoginPassword';
+import { getLoginLoading } from '../../modal/selectors/getLoginLoading/getLoginLoading';
+import { getLoginError } from '../../modal/selectors/getLoginError/getLoginError';
 import { loginByUserName } from '../../modal/services/loginByUserName/loginByUserName';
-import { loginActions } from '../../modal/slice/loginSlice';
-import { getLoginState } from '../../modal/selectors/getLoginState/getLoginState';
+import { loginActions, loginReducer } from '../../modal/slice/loginSlice';
 
 import cls from './LoginForm.module.scss';
 
-interface LoginFormProps {
+export interface LoginFormProps {
     className?: string
 }
 
 const LoginForm = memo((props: LoginFormProps) => {
     const { t } = useTranslation();
     const dispatch = useDispatch();
-    const {
-        username, password, error, isLoading,
-    } = useSelector(getLoginState);
+    const store = useStore() as ReduxStoreWithManager;
+    const username = useSelector(getLoginUsername);
+    const password = useSelector(getLoginPassword);
+    const isLoading = useSelector(getLoginLoading);
+    const error = useSelector(getLoginError);
+
+    useEffect(() => {
+        store.reducerManager.add('loginForm', loginReducer);
+
+        return () => {
+            store.reducerManager.remove('loginForm');
+        };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const onChangeUsername = useCallback((value) => {
         dispatch(loginActions.setUsername(value));
