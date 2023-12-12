@@ -7,6 +7,7 @@ import { memo, useCallback } from 'react';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import DynamicModuleLoader,
 { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { getLoginUsername } from '../../modal/selectors/getLoginUsername/getLoginUsername';
 import { getLoginPassword } from '../../modal/selectors/getLoginPassword/getLoginPassword';
 import { getLoginLoading } from '../../modal/selectors/getLoginLoading/getLoginLoading';
@@ -17,7 +18,8 @@ import { loginActions, loginReducer } from '../../modal/slice/loginSlice';
 import cls from './LoginForm.module.scss';
 
 export interface LoginFormProps {
-    className?: string
+    className?: string;
+    onSuccess: () => void;
 }
 
 const initialReducers: ReducersList = {
@@ -25,8 +27,9 @@ const initialReducers: ReducersList = {
 };
 
 const LoginForm = memo((props: LoginFormProps) => {
+    const { className, onSuccess } = props;
     const { t } = useTranslation();
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
     const username = useSelector(getLoginUsername);
     const password = useSelector(getLoginPassword);
     const isLoading = useSelector(getLoginLoading);
@@ -40,11 +43,13 @@ const LoginForm = memo((props: LoginFormProps) => {
         dispatch(loginActions.setPassword(value));
     }, [dispatch]);
 
-    const onLoginClick = useCallback(() => {
-        dispatch(loginByUserName({ username, password }));
-    }, [dispatch, username, password]);
+    const onLoginClick = useCallback(async () => {
+        const result = await dispatch(loginByUserName({ username, password }));
+        if (result.meta.requestStatus === 'fulfilled') {
+            onSuccess();
+        }
+    }, [onSuccess, dispatch, username, password]);
 
-    const { className } = props;
     return (
         // eslint-disable-next-line i18next/no-literal-string
         <DynamicModuleLoader reducers={initialReducers} removeAfterUnmount>
