@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-props-no-spreading */
 import { ButtonHTMLAttributes, memo } from 'react';
-import { classNames } from 'shared/lib/classNames';
+import { classNames, Mods } from 'shared/lib/classNames';
 import cls from './Button.module.scss';
 
 export enum ButtonTheme {
@@ -29,14 +29,14 @@ const Button = memo((props: ButtonProps) => {
     const {
         className,
         children,
-        theme,
+        theme = ButtonTheme.OUTLINE,
         square,
         disabled,
         size = ButtonSize.M,
         ...otherProps
     } = props;
 
-    const mods : Record<string, boolean> = {
+    const mods : Mods = {
         [cls[theme]]: true,
         [cls.square]: square,
         [cls[size]]: true,
