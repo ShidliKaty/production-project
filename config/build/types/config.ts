@@ -13,7 +13,7 @@ export interface BuildEnv {
     apiUrl: string;
 }
 
-export interface buildOptions {
+export interface BuildOptions {
     mode: BuildMode;
     paths: BuildPaths;
     isDev: boolean;
