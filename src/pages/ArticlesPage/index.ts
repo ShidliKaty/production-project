@@ -1,3 +1,3 @@
-export {
-    ArticlesPageAsync as ArticlesPage,
-} from './ui/ArticlesPage/ArticlesPage.async';
+import { ArticlesPageLazy } from './ui/ArticlesPageLazy';
+
+export { ArticlesPageLazy as ArticlesPage };

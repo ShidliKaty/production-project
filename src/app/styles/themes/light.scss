@@ -1,9 +1,15 @@
 :root {
     --bg-color: rgb(223, 223, 225);
     --inverted-bg-color: rgb(1, 1, 74);
-
     --primary-color: rgb(5, 8, 239);
     --secondary-color: rgb(14, 2, 146);
     --inverted-primary-color: rgb(0, 255, 0);
     --inverted-secondary-color: rgb(2, 202, 2);
+
+    // skeleton
+    --skeleton-color: #fff;
+    --skeleton-shadow: rgba(0 0 0 / 20%);
+
+    // code
+    --code-bg: #fff;
 }
