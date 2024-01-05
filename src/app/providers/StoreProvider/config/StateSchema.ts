@@ -6,15 +6,16 @@ import { ArticleDetailsSchema } from 'entities/Articles';
 import { CounterSchema } from 'entities/Counter';
 import { ProfileSchema } from 'entities/Profile';
 import { UserSchema } from 'entities/User';
-import { LoginSchema } from 'features/AuthByUsername';
 import { AddCommentFormSchema } from 'features/addCommentForm';
+import { LoginSchema } from 'features/AuthByUsername';
 import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
-import { NavigateOptions, To } from 'react-router-dom';
 import { ArticlesPageSchema } from 'pages/ArticlesPage/model/types/articlesPageSchema';
+import { ScrollSaveSchema } from 'widgets/Page/ScrollSave';
 
 export interface StateSchema {
     counter: CounterSchema;
     user: UserSchema;
+    scrollSave: ScrollSaveSchema;
 
     // Асинхронные редюсеры
     loginForm?: LoginSchema;
