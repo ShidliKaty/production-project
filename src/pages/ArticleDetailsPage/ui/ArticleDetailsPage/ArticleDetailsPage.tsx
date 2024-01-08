@@ -23,6 +23,7 @@ import {
 import { articleDetailsPageReducer } from '../../model/slices';
 import { getArticleComments } from '../../model/slices/articleDetailsCommentsSlice';
 import { getArticleRecommendations } from '../../model/slices/articleDetailsPageRecommendationsSlice';
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import cls from './ArticleDetailsPage.module.scss';
 
 interface ArticleDetailsPageProps {
@@ -66,9 +67,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-                <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
-                    {t('Назад к списку')}
-                </Button>
+                <ArticleDetailsPageHeader />
                 <ArticleDetails id={id || '1'} />
                 <Text
                     size={TextSize.L}
