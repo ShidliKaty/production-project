@@ -43,10 +43,6 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     const recommendationsIsLoading = useSelector(getArticleRecommendationsIsLoading);
     const navigate = useNavigate();
 
-    const onBackToList = useCallback(() => {
-        navigate(RoutePath.articles);
-    }, [navigate]);
-
     const onSendComment = useCallback((text: string) => {
         dispatch(addCommentForArticle(text));
     }, [dispatch]);
