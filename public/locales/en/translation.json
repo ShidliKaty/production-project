@@ -18,7 +18,15 @@
     "Неверный логин или пароль": "Incorrect username or password",
     "PROFILE PAGE": "PROFILE PAGE",
     "Профиль": "Profile",
+    "по": "in",
+    "Создать статью": "Create an article",
+    "Сортировать ПО": "Sort By",
     "Статьи": "Articles",
     "Комментарии отсутствуют": "No comments",
-    "Поиск": "Search"
+    "Поиск": "Search",
+    "возрастанию": "ascending order",
+    "дате создания": "date of creation",
+    "названию": "name",
+    "просмотрам": "views",
+    "убыванию": "decreasing order"
 }

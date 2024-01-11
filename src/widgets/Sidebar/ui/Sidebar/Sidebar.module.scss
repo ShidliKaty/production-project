@@ -26,8 +26,6 @@
 
 .items {
     margin-top: 20;
-    display: flex;
-    flex-direction: column;
     margin-left: 30px;
 }
 
@@ -41,11 +39,5 @@
 
     .lang {
         margin-left: 0;
-    }
-
-    .link {
-        opacity: 0;
-        transition: 0.2s opacity;
-        width: 0;
     }
 }
