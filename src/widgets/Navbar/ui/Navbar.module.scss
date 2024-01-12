@@ -7,10 +7,9 @@
     padding: 20px;
 }
 
-.links {
-    position: fixed;
-    right: 40px;
-    color: var(--inverted-primary-color);
+.links,
+.dropdown {
+    margin-left: auto;
 }
 
 .mainLink {
