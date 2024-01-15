@@ -11,11 +11,13 @@ import { LoginSchema } from 'features/AuthByUsername';
 import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage/model/types';
 import { ArticlesPageSchema } from 'pages/ArticlesPage/model/types/articlesPageSchema';
 import { ScrollSaveSchema } from 'widgets/Page/ScrollSave';
+import { rtkApi } from 'shared/api/rtkApi';
 
 export interface StateSchema {
     counter: CounterSchema;
     user: UserSchema;
     scrollSave: ScrollSaveSchema;
+    [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>;
 
     // Асинхронные редюсеры
     loginForm?: LoginSchema;
