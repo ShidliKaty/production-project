@@ -1,4 +1,3 @@
-import { ArticleList } from 'entities/Articles';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
@@ -15,6 +14,7 @@ import {
 import { fetchNextArticlesPage } from '../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import { initArticlesPage } from '../model/services/initArticlesPage/initArticlesPage';
 import { articlesPageReducer, getArticles } from '../model/slices/articlesPageSlice';
+import { ArticleInfiniteList } from './ArticleInfiniteList/ArticleInfiniteList';
 import cls from './ArticlesPage.module.scss';
 import { ArticlesPageFilters } from './ArticlesPageFilters/ArticlesPageFilters';
 
@@ -53,12 +53,8 @@ const ArticlesPage = (props: ArticlesPageProps) => {
                 className={classNames(cls.ArticlesPage, {}, [className])}
             >
                 <ArticlesPageFilters />
-                <ArticleList
-                    isLoading={isLoading}
-                    view={view}
-                    articles={articles}
-                    className={cls.list}
-                />
+                <ArticleInfiniteList className={cls.list} />
+
             </Page>
         </DynamicModuleLoader>
     );

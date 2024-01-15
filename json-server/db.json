@@ -577,6 +577,12 @@
       "userId": "1",
       "text": "hhh",
       "id": "09r4PVy"
+    },
+    {
+      "articleId": "7",
+      "userId": "2",
+      "text": "yuyuy",
+      "id": "H0EnIY1"
     }
   ],
   "users": [
@@ -609,10 +615,10 @@
     },
     {
       "id": "2",
-      "first": "ulbi tv",
+      "first": "kate",
       "lastname": "asf",
-      "age": 465,
-      "currency": "RUB",
+      "age": 35,
+      "currency": "EUR",
       "country": "Russia",
       "city": "Moscow",
       "username": "ulbi tv",
