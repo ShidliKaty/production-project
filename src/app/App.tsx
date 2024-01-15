@@ -4,8 +4,7 @@ import { AppRouter } from 'app/providers/router/intex';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import { Suspense, useEffect } from 'react';
-import { userActions } from 'entities/User';
-import { getUserInited } from 'entities/User/modal/selectors/getUserInited/getUserInited';
+import { getUserInited, userActions } from 'entities/User';
 import { useTheme } from './providers/ThemeProvider';
 
 const App = () => {
