@@ -8,7 +8,7 @@ import { UserSchema } from 'entities/User';
 import { AddCommentFormSchema } from 'features/addCommentForm';
 import { LoginSchema } from 'features/AuthByUsername';
 import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage/model/types';
-import { ArticlesPageSchema } from 'pages/ArticlesPage/model/types/articlesPageSchema';
+import { ArticlesPageSchema } from 'pages/ArticlesPage';
 import { ScrollSaveSchema } from 'widgets/Page/ScrollSave';
 import { rtkApi } from 'shared/api/rtkApi';
 import { ProfileSchema } from 'features/editableProfileCard';
