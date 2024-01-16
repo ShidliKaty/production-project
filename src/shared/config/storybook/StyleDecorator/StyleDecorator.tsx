@@ -1,6 +1,8 @@
 import 'app/styles/index.scss';
 import { Story } from '@storybook/react';
 
-export const StyleDecorator = (story: () => Story) => (
-    <div className="app light">{story()}</div>
+export const StyleDecorator = (StoryComponent: Story) => (
+    <div className="app light">
+        <StoryComponent />
+    </div>
 );
