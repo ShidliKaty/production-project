@@ -1,4 +1,5 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ListBox } from './ListBox';
 
