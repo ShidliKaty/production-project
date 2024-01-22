@@ -1,6 +1,6 @@
 /* eslint-disable i18next/no-literal-string */
 import { CSSProperties, useMemo } from 'react';
-import { classNames } from 'shared/lib/classNames';
+import { classNames } from '@/shared/lib/classNames';
 import cls from './Avatar.module.scss';
 
 interface AvatarProps {

@@ -1,13 +1,13 @@
-import { NotificationList } from 'entities/Notification';
 import { memo, useCallback, useState } from 'react';
-import NotificationIcon from 'shared/assets/icons/notification-20-20.svg';
-import { classNames } from 'shared/lib/classNames';
-import { AnimationProvider } from 'shared/lib/components/AnimationProvider';
-import { useDevice } from 'shared/lib/hooks/useDevice/useDevice';
-import Button, { ButtonTheme } from 'shared/ui/Button/Button';
-import { Drawer } from 'shared/ui/Drawer/Drawer';
-import { Icon } from 'shared/ui/Icon/Icon';
-import { Popover } from 'shared/ui/Popups';
+import { NotificationList } from '@/entities/Notification';
+import NotificationIcon from '@/shared/assets/icons/notification-20-20.svg';
+import { classNames } from '@/shared/lib/classNames';
+import { AnimationProvider } from '@/shared/lib/components/AnimationProvider';
+import { useDevice } from '@/shared/lib/hooks/useDevice/useDevice';
+import Button, { ButtonTheme } from '@/shared/ui/Button/Button';
+import { Drawer } from '@/shared/ui/Drawer/Drawer';
+import { Icon } from '@/shared/ui/Icon/Icon';
+import { Popover } from '@/shared/ui/Popups';
 import cls from './NotificationButton.module.scss';
 
 interface NotificationButtonProps {
