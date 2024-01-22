@@ -605,6 +605,12 @@
       "userId": "2",
       "text": "yuyuy",
       "id": "H0EnIY1"
+    },
+    {
+      "articleId": "3",
+      "userId": "1",
+      "text": "jhgjh",
+      "id": "GT0jWer"
     }
   ],
   "users": [
@@ -658,6 +664,45 @@
       "city": "Moscow",
       "username": "ulbi tv",
       "avatar": "https://clapway.com/wp-content/uploads/2015/11/13.-Hacker-2.jpg"
+    }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "userId": "1",
+      "articleId": "3",
+      "rate": 2,
+      "feedback": "hjh",
+      "id": "d7gt60A"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "profileId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "profileId": "2"
     }
   ]
 }
