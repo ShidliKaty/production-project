@@ -4,10 +4,10 @@ import {
 import { counterReducer } from '@/entities/Counter';
 import { userReducer } from '@/entities/User';
 import { $api } from '@/shared/api/api';
-import { scrollSaveReducer } from '@/widgets/Page/ScrollSave/model/slices/ScrollSaveSlice';
 import { rtkApi } from '@/shared/api/rtkApi';
 import { createReducerManager } from './reducerManager';
 import { StateSchema, ThunkExtraArg } from './StateSchema';
+import { scrollSaveReducer } from '@/widgets/ScrollSave';
 
 export function createReduxStore(
     initialState?: StateSchema,

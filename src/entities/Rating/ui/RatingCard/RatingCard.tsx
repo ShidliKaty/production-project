@@ -1,6 +1,6 @@
 import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { classNames } from '@/shared/lib/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { useDevice } from '@/shared/lib/hooks/useDevice/useDevice';
 import Button, { ButtonSize, ButtonTheme } from '@/shared/ui/Button/Button';
 import { Card } from '@/shared/ui/Card/Card';

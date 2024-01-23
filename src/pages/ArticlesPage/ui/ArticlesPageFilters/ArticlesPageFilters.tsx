@@ -4,15 +4,12 @@ import { useSelector } from 'react-redux';
 import {
     ArticleSortField, ArticleSortSelector, ArticleType, ArticleView,
 } from '@/entities/Articles';
-import { classNames } from '@/shared/lib/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { Card } from '@/shared/ui/Card/Card';
 import { SortOrder } from '@/shared/types';
 import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
-// import { TabItem, Tabs } from 'shared/ui/Tabs/Tabs';
-import { ArticleViewSelector } from '@/widgets/ArticleViewSelector/ArticleViewSelector';
 import Input from '@/shared/ui/Input/Input';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
-import { ArticleTypeTabs } from '@/features/ArticleTypeTabs/ArticleTypeTabs';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import cls from './ArticlesPageFilters.module.scss';
 import {
@@ -21,6 +18,8 @@ import {
     getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
 import { articlesPageActions } from '../../model/slices/articlesPageSlice';
+import { ArticleViewSelector } from '@/widgets/ArticleViewSelector';
+import { ArticleTypeTabs } from '@/features/ArticleTypeTabs';
 
 interface ArticlesPageFiltersProps {
     className?: string;

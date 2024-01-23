@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { memo, Suspense, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { classNames } from '@/shared/lib/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text, TextSize } from '@/shared/ui/Text/Text';
 import { AddCommentForm } from '@/features/addCommentForm';
 import { CommentList } from '@/entities/Comment';

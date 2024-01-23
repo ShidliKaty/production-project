@@ -7,11 +7,11 @@ import { CounterSchema } from '@/entities/Counter';
 import { UserSchema } from '@/entities/User';
 import { AddCommentFormSchema } from '@/features/addCommentForm';
 import { LoginSchema } from '@/features/AuthByUsername';
-import { ArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage/model/types';
 import { ArticlesPageSchema } from '@/pages/ArticlesPage';
-import { ScrollSaveSchema } from '@/widgets/Page/ScrollSave';
+import { ScrollSaveSchema } from '@/widgets/ScrollSave';
 import { rtkApi } from '@/shared/api/rtkApi';
 import { ProfileSchema } from '@/features/editableProfileCard';
+import { ArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage';
 
 export interface StateSchema {
     counter: CounterSchema;
