@@ -1,3 +1,1 @@
-import { ArticleTypeTabs } from './ArticleTypeTabs';
-
-export { ArticleTypeTabs };
+export { ArticleTypeTabs } from './ui/ArticleTypeTabs';

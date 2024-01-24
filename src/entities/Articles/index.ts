@@ -8,5 +8,4 @@ export {
 } from './model/consts/consts';
 
 export { ArticleList } from './ui/ArticleList/ArticleList';
-export { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelector';
 export { getArticleDetailsData } from './model/selectors/articleDetails';
