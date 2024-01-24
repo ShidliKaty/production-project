@@ -173,7 +173,7 @@ Clear.args = {
 
 ## Сущности (entities)
 
-- [Article](/src/entities/Article)
+- [Articles](/src/entities/Articles)
 - [Comment](/src/entities/Comment)
 - [Counter](/src/entities/Counter)
 - [Country](/src/entities/Country)
@@ -186,14 +186,12 @@ Clear.args = {
 ## Фичи (features)
 
 - [addCommentForm](/src/features/addCommentForm)
-- [articleEditForm](/src/features/articleEditForm)
 - [articleRating](/src/features/articleRating)
 - [articleRecommendationsList](/src/features/articleRecommendationsList)
 - [AuthByUsername](/src/features/AuthByUsername)
+- [ArticleTypeTabs](/src/features/ArticleTypeTabs)
 - [avatarDropdown](/src/features/avatarDropdown)
 - [editableProfileCard](/src/features/editableProfileCard)
-- [LangSwitcher](/src/features/LangSwitcher)
-- [notificationButton](/src/features/notificationButton)
-- [profileRating](/src/features/profileRating)
-- [ThemeSwitcher](/src/features/ThemeSwitcher)
-- [UI](/src/features/UI)
+
+
+
