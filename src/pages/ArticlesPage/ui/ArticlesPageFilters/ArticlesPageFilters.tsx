@@ -6,7 +6,7 @@ import {
 } from '@/entities/Articles';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Card } from '@/shared/ui/Card/Card';
-import { SortOrder } from '@/shared/types';
+import { SortOrder } from '@/shared/types/sort';
 import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
 import Input from '@/shared/ui/Input/Input';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
