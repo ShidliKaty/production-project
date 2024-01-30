@@ -723,6 +723,13 @@
       "rate": 2,
       "feedback": "hjh",
       "id": "d7gt60A"
+    },
+    {
+      "userId": "1",
+      "articleId": "7",
+      "rate": 4,
+      "feedback": "",
+      "id": "51sRIg3"
     }
   ],
   "profile-ratings": [

@@ -170,6 +170,25 @@ Clear.args = {
 
 ----
 
+### Работа с feature-flags
+
+Разрешено использование feature flags только с помощью хелпера toggleFeatures
+
+в него передается объект с опциями 
+
+{
+   name: название фича-флага, 
+   on: функция, которая отработает после Включения фичи 
+   of: функция, которая отработает после Выключения фичи
+}
+
+Для автоматического удаления фичи использовать скрипт remove-feature.ts,
+который принимает 2 аргумента
+1. Название удаляемого фича-флага
+2. Состояние (on\off)
+
+----
+
 
 ## Сущности (entities)
 
@@ -190,8 +209,10 @@ Clear.args = {
 - [articleRecommendationsList](/src/features/articleRecommendationsList)
 - [AuthByUsername](/src/features/AuthByUsername)
 - [ArticleTypeTabs](/src/features/ArticleTypeTabs)
+- [ArticleViewSelector](/src/features/ArticleViewSelector)
 - [avatarDropdown](/src/features/avatarDropdown)
 - [editableProfileCard](/src/features/editableProfileCard)
+- [notificationButton](/src/features/notificationButton)
 
 
 
